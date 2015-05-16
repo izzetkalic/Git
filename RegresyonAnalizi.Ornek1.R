@@ -15,7 +15,7 @@ Y = matrix(y)
 TraX <- t(X)
 TraXX <- TraX %*% X
 DetXX <- det(TraXX)
-# Ko-faktorler Matrisi Icýn Algoritma (Bkz. http://stackoverflow.com/questions/16757100/get-adjoint-matrix-in-r)
+# Ko-faktorler Matrisi IcÃ½n Algoritma (Bkz. http://stackoverflow.com/questions/16757100/get-adjoint-matrix-in-r)
 minor <- function(TraXX, i, j) det( TraXX[-i,-j] )
 cofactor <- function(TraXX, i, j) (-1)^(i+j) * minor(TraXX,i,j)
 adjoint <- function(TraXX) {
